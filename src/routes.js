@@ -14,9 +14,9 @@
         url: '/',
         component: 'app'
       })
-      .state('appfome', {
-        url: '/appfome',
-        component: 'appFome'
+      .state('persona', {
+        url: '/persona',
+        component: 'persona'
       });
   }
 })();
