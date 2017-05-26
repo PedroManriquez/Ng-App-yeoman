@@ -8,19 +8,14 @@
     controller: personaCtrl,
     controllerAs: 'vm'
   });
+
+  personaCtrl.$inject = ['PersonaService'];
   /**
   * Función global personaCtrl es el controlador del componente persona
   */
-  function personaCtrl() {
+  function personaCtrl(PersonaService) {
     var vm = this;
     // Definimos un modelo persona que ahora es un objeto javascript con sus respectivas propiedades
-    vm.persona = {
-      nombre: 'Pedro',
-      apellido: 'Manríquez',
-      carrera: {
-        codigo: 3086,
-        nombre: 'Ingeniería Informática'
-      }
-    };
+    vm.personas = PersonaService.query();
   }
 })();

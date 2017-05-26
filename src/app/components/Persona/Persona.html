@@ -1,4 +1,22 @@
-<h1> {{ vm.persona.nombre + ' ' + vm.persona.apellido }}</h1>
-<p> {{ vm.persona.carrera.nombre }} </p>
-<br>
-<a type="button" ui-sref="app">VOLVER</a>
+<h1> Personas en Servicio de persona</h1>
+<div class="container">
+	<table class="table table-responsive table-hover table-bordered">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Carrera</th>
+				<th>Acción</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="persona in vm.personas">
+				<td> {{ persona.nombre }} </td>
+				<td> {{ persona.apellido }} </td>
+				<td> {{ persona.carrera.nombre }} </td>
+				<td> <button class="btn btn-danger">Eliminar</button> </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<a type="button" class="btn btn-primary" ui-sref="app">VOLVER</a>

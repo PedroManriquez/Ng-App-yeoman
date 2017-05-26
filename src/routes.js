@@ -17,6 +17,10 @@
       .state('persona', {
         url: '/persona',
         component: 'persona'
+      })
+      .state('cerveza', {
+        url: '/cerveza',
+        component: 'cerveza'
       });
   }
 })();
