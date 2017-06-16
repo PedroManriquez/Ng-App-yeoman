@@ -21,6 +21,10 @@
       .state('cerveza', {
         url: '/cerveza',
         component: 'cerveza'
+      })
+      .state('pelicula', {
+        url: '/pelicula',
+        component: 'pelicula'
       });
   }
 })();

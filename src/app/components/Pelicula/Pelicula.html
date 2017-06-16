@@ -1,0 +1,17 @@
+<section>
+	<h1>Peliculas, de API en Laravel</h1>	
+	<table class="table table-bordered table-hover" style="width: 80%; margin-left: 10%;">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Director</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="pelicula in vm.peliculas">
+				<td>{{ pelicula.nombre }}</td>
+				<td>{{ pelicula.director }}</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
