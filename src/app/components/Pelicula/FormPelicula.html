@@ -1,0 +1,32 @@
+<form ng-submit="vm.semanticAction(vm.peliculaForm)">
+	<legend ng-if="vm.location === 'store'">Crear pelicula</legend>
+	<legend ng-if="vm.location === 'view'">Ver pelicula</legend>
+	<legend ng-if="vm.location === 'update'">Actualizar pelicula</legend>
+	<div class="form-group">
+		<label>Nombre</label>
+		<input ng-model="vm.peliculaForm.nombre" type="text" class="form-control" placeholder="Titulo de la pelicula">
+	</div>
+	<div class="form-group">
+		<label>Sinopsis</label>
+		<input ng-model="vm.peliculaForm.sinopsis" type="text" class="form-control" placeholder="Resumen pelicula">
+	</div>
+	<div class="form-group">
+		<label>Director</label>
+		<input ng-model="vm.peliculaForm.director" type="text" class="form-control" placeholder="Nombre del Director">
+	</div>
+	<div class="form-group" ng-if="vm.location === 'store'">
+		<label>Fecha Estreno</label>
+		<input ng-model="vm.peliculaForm.anno_estreno" type="date" class="form-control">
+	</div>
+	<div class="form-group">
+		<label>Fecha Estreno</label>
+		<input ng-model="vm.peliculaForm.anno_estreno" type="text" class="form-control" placeholder="Fecha Estreno">
+	</div>
+	<div class="form-group">
+		<label>Genero</label>
+		<select ng-model="vm.peliculaForm.id_genero" class="form-control" ng-options="genero as genero.descripcion for genero in vm.generos"></select>
+	</div>
+	<a ui-sref="pelicula" class="btn btn-default">Volver</a>
+	<button ng-if="vm.location === 'store'" type="submit" class="btn btn-success">Guardar</button>
+	<button ng-if="vm.location === 'update'" type="submit" class="btn btn-danger">Actualizar</button>
+</form>

@@ -1,16 +1,23 @@
 <section>
 	<h1>Peliculas, de API en Laravel</h1>	
+	<a ui-sref="crearPelicula" class="btn btn-primary">Crear Nuevo Recurso</a>
 	<table class="table table-bordered table-hover" style="width: 80%; margin-left: 10%;">
 		<thead>
 			<tr>
 				<th>Nombre</th>
 				<th>Director</th>
+				<th>Acción</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr ng-repeat="pelicula in vm.peliculas">
 				<td>{{ pelicula.nombre }}</td>
 				<td>{{ pelicula.director }}</td>
+				<td>
+					<a ui-sref="verPelicula({id: pelicula.id_pelicula})">ver</a>
+					<!-- <a ui-sref="">actualizar</a>
+					<a ui-sref="">eliminar</a> -->
+				</td>
 			</tr>
 		</tbody>
 	</table>
